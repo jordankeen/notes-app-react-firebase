@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import Note from './Note/Note';
+import NoteForm from './NoteForm/NoteForm';
 import './App.css';
 
 class App extends Component {
 
   constructor(props){
 	super(props);
-
+	this.addNote = this.addNote.bind(this);
 	// we're going to setup the react state of our component
 	this.state = {
 	  notes: [
@@ -16,11 +17,22 @@ class App extends Component {
 	  ],
 	}
   }
+
+  addNote(note){
+  	//push the note onto the notes array
+  	const previousNotes = this.state.notes;
+  	previousNotes.push({ id: previousNotes.length + 1, noteContent: note });
+
+  	this.setState({
+  		notes: previousNotes
+  	})
+  }
+
   render() {
 	return (
 	  <div className="notesWrapper">
 	  	<div className="notesHeader">
-	  		<h1 className="heading">React & Firebase To-Do List</h1>
+	  		<div className="heading">React & Firebase To-Do List</div>
 	  	</div>
 	  	<div className="notesBody">
 	  	{
@@ -32,7 +44,7 @@ class App extends Component {
 	  	}
 		</div>
 		<div className="notesFooter">
-			footer here
+			<NoteForm addNote={this.addNote}/>
 		</div>
 	  </div>
 	);
