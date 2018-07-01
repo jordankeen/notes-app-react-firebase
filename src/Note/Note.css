@@ -1,20 +1,20 @@
 .note {
-  padding:10px 10px 38px 34px;
-  height: auto; 
-  margin: auto;
+  padding:15px;
   margin-bottom: 8px;
-  width: 60%;
-  font-family: 'Lato', sans-serif;
-  font-size: 1.4em;
-  color: #222;
-  background-color: #eed; 
-  border-radius: 3px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  color: black;
+  background-color: #fff;
+  font-weight:  300;
+  border-radius: 5px;
   box-shadow: 43x 3px 2px #333;
   opacity: 1;
+  position: relative;
+  border-left:  5px solid #51de96;
 }
 
-@keyframes fadeIn { from { opacity:0; } to { opacity:0.8; } }
-@keyframes fadeOut { from { opactiy:0.8; } to { opacity:0; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:0.9; } }
+@keyframes fadeOut { from { opactiy:0.9; } to { opacity:0; } }
 
 .fade-in {
     opacity:0;
@@ -22,22 +22,20 @@
     animation-fill-mode:forwards;
     animation-duration: 0.1s;
 }
-
 .noteContent{
-  float:left;
-  padding-right: 70px;
-  padding-bottom: 10px;
-  display: block;
+  margin: 0;
 }
-
 .closebtn {
-    color: #AA9;
-    font-weight: bold;
+    color: #414141;
     float: right;
+    line-height: 1;
     cursor: pointer;
-    font-size: 1.3em;
+    font-size: 23px;
+    position: absolute;
+    top: 50%;
+    right:  15px;
+    transform: translateY(-50%);
 }
-
 .closebtn:hover {
     color: #AC2500;
 }

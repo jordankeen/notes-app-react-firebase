@@ -61,8 +61,11 @@ class App extends Component {
 	render() {
 		return (
 			<div className="notesWrapper">
-				<div className="notesHeader">
-					<div className="heading">React & Firebase To-Do List</div>
+				<div className="notesHeader-container">
+					<h1 className="notesHeader">My To-Do List:</h1>
+				</div>
+				<div className="notesInput">
+					<NoteForm addNote={this.addNote}/>
 				</div>
 				<div className="notesBody">
 				{
@@ -75,10 +78,8 @@ class App extends Component {
 						)
 					})
 				}
-			</div>
-			<div className="notesFooter">
-				<NoteForm addNote={this.addNote}/>
-			</div>
+				</div>
+
 			</div>
 		);
 	}

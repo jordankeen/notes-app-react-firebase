@@ -1,3 +1,3 @@
 ## Notes app React/Firebase
 
-- Note app tutorial with React/Firebase by: Wes Doyle
+- Note app learning tutorial with React/Firebase by: Wes Doyle
