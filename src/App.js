@@ -67,7 +67,7 @@ class App extends Component {
 				<div className="notesInput">
 					<NoteForm addNote={this.addNote}/>
 				</div>
-				<div className="notesBody">
+				<div className="notesBody" id="sortable">
 				{
 					this.state.notes.map((note) => {
 						return(
